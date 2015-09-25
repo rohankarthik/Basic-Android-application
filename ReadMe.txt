@@ -1,0 +1,2 @@
+The methods displayed in the text view are not consistent with the ones in the Log.This is due to the fact that the instance of the  class Assignment is destroyed and a new one is created everytime it is rotated.
+We can solve this issue by saving the old value of the mCurentIndex across a runtime configuration change(rotation) by overriding the Activity method.i.e. The value of mCurrentIndex across rotation is saved by overriding onSaveInstanceState() to save additional data to the bundle and then reading that data back in onCreate().
